@@ -1,6 +1,6 @@
 /* Grouping selector 
 - comma-separated list
-- group together declarations that are common among classes to avoid repetition (using the comma (,) separator)*/
+- group together declarations or styles that are common among classes to avoid repetition (using the comma (,) separator)*/
 
 .black-box,
 .yellow-box {
