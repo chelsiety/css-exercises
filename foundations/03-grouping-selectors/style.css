@@ -1,0 +1,18 @@
+/* Grouping selector 
+- comma-separated list
+- group together declarations that are common among classes to avoid repetition (using the comma (,) separator)*/
+
+.black-box,
+.yellow-box {
+    font-size: 28px;
+    font-family: Helvetica, 'Times New Roman', sans-serif;
+}
+
+.black-box {
+    background-color: black;
+    color: white;
+}
+
+.yellow-box {
+    background-color: yellow;
+}
