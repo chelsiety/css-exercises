@@ -1,0 +1,11 @@
+/* Image <img> tag with classes "original proportioned" and "original distorted" are not styled in CSS. Only img elements with the "avatar" class is modified.*/
+
+.avatar.proportioned {
+    height: auto;
+    width: 300px;
+}
+
+.avatar.distorted {
+    height: 400px;
+    width: 200px;
+}
