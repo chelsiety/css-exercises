@@ -1,0 +1,18 @@
+.container .text {
+   background-color: yellow;
+   color: red;
+   font-size: 20px;
+   text-align: center;
+}
+
+
+/* Possible descendant combinators:
+
+.container .text   (.class .class)
+div p              (type type)
+div .text          (type .class)
+.container p       (.class type)
+
+*/
+
+
