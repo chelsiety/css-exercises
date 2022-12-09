@@ -12,6 +12,9 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex; 
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .profile-image {
@@ -45,4 +48,20 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+
+  /* removes default margin/padding that ul has */
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo-link-group, .notif-profile-img-group {
+  /* use grouping selector (,) to group classes that have similar declarations (property: value;)
+  /* display: flex for these 2 classes creates a flex container with 2 flex items each
+        (flex container 1: logo, links)
+        (flex container 2: notif, profile image) */
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
