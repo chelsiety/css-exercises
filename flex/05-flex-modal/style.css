@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,7 +20,10 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, .2);
+  display: flex;
+  padding: 16px;
+  gap: 16px;
 }
 
 .icon {
@@ -33,6 +37,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /*  The flex item has flex-shrink: 1 as default. Add flex-shrink:0; so that the flex item will not shrink. 
+  The icon will retain the width it needs. The icon will not get smashed by the text */
+  flex-shrink: 0;
+}
+
+.header {
+  font-weight: 700;        /* bold */
+  font-size: larger;       /* The font will be larger relative to the parent element's font size. In this case, greater than the default font size, 16px*/ 
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+ 
 }
 
 .close-button {
@@ -46,6 +66,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 button {
