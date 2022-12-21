@@ -5,6 +5,10 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  /* Make the footer stick to the bottom */
+  display: flex;
+  flex-direction: column; 
 }
 
 img {
@@ -16,6 +20,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px;
 }
 
 input {
@@ -25,3 +30,91 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+ul {
+  /* Remove list bullets from ul */
+    list-style-type: none;   
+
+  /* Remove default margin/padding that ul has */
+    margin: 0; 
+    padding: 0; 
+
+  /*.left-links, .right-links */
+    display: flex; 
+    gap: 16px;
+}
+
+a:link, a:visited  {
+  text-decoration: none;
+  color: hsl(0, 0%, 15%);
+}
+
+
+a:hover, a:active {
+  text-decoration: underline;
+  color: hsl(0, 0%, 40%);
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px; 
+}
+
+.footer {
+  background: #eeeeee;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* flex: 1; equivalent to flex: 1 1 0
+ - Make flex items grow evenly (logo, input, button)
+ - Make the footer stick to the bottom
+ - Create space between the logo, input, buttons
+ - Make each item grow to fill the available space
+*/
+  flex: 1;
+} 
+
+/*
+Lay out Odin Project home page
+ul (left-links and right-links)
+- Remove list bullets
+- Remove default margin/padding that ul has 
+- Add display: flex 
+- Add gap between list items
+
+a (links)
+- Remove link decoration for a:link, a:visited 
+- Add underline decoration and lighter gray color for a:hover, a:active 
+
+header and footer
+- Add display: flex
+- Make the links in the header and footer pushed to either side 
+- Add padding
+
+footer 
+- Add light gray background
+
+button
+- Add padding
+
+body
+- Add display: flex 
+  - Flex container: body (3 flex items: header, content, footer)
+- Set flex-direction to column
+
+content
+- Add display: flex;
+ Set flex-direction to column
+- Center content
+- Add flex:1
+   - Make header stay at the top and footer stay at the bottom (stay in place if resizing screen) 
+   - Make flex items grow evenly (logo, input, button)
+*/
+
