@@ -2,27 +2,79 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+
+  /* Make the footer stick to the bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0 16px;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
+.sidebar-and-cards-container {
+  display: flex;
+  flex: 1;     /* Make the footer stick to the bottom */
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
+
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 16px;     /* add spacing between items vertically */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.card-container {
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 1460px;     /*Let there be 3 cards per row maximum - not in solution.css */
+  /* Note: Removing max-width will make the number of cards lined up in that this section,
+   change based on the width of your screen. No need to stress about getting exactly 2x3 or 3x2 grid */
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  
+  width: 300px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
